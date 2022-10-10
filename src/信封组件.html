@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>信封组件</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(119, 157, 193);
+      }
+      .container {
+        position: relative;
+        top: 30px;
+        width: 735px;
+        height: 350px;
+        background-image: url(../psimage/背景图.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .b,
+      .c,
+      .d,
+      .e {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, 0.5));
+        background-size: cover;
+        opacity: 0.7;
+        transition: 1.5s;
+      }
+      .b::after,
+      .c::after,
+      .d::after,
+      .e::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(../psimage/背景图.jpg);
+      }
+      .b {
+        left: -400px;
+        transform: rotateZ(100deg);
+        overflow: hidden;
+      }
+      .b::after {
+        transform: rotateZ(-100deg);
+      }
+      .c {
+        left: -400px;
+        transform: rotateZ(-100deg);
+        overflow: hidden;
+      }
+      .c::after {
+        transform: rotateZ(100deg);
+      }
+      .d {
+        left: 400px;
+        transform: rotateZ(105deg);
+        overflow: hidden;
+      }
+      .d::after {
+        transform: rotateZ(-105deg);
+      }
+      .e {
+        left: 400px;
+        transform: rotateZ(-100deg);
+        overflow: hidden;
+      }
+      .e::after {
+        transform: rotateZ(100deg);
+      }
+      .content {
+        opacity: 0;
+        font: 900 40px 微软雅黑;
+        letter-spacing: 10px;
+        color: rgb(0, 2, 4);
+        transition: 1.5s;
+      }
+      .container:hover .b {
+        left: -570px;
+      }
+      .container:hover .c {
+        left: -610px;
+      }
+      .container:hover .d {
+        left: 570px;
+      }
+      .container:hover .e {
+        left: 610px;
+      }
+      .container:hover .content {
+        opacity: 1;
+      }
+       .anniu{
+        width: 200px;
+        height: 30px;
+        border-radius: 30px;
+        margin-top: 60px;
+      }
+      p{
+        font-size: 20px;
+        line-height: 32px;
+        height: 32px;
+      }
+      section{
+        text-align: center;
+      }
+    </style>
+    <link rel="stylesheet" href="../css/common.css" />
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="content">❤️祝梦蝶小朋友生日快乐！❤️</div>
+    </div>
+    <button class="anniu" onclick="add()" >点一下我鸭~</button>
+    <section>
+        
+      <p> SB 对于19岁的你的祝福 </p>
+      <p> 是经历世事而不失少年意趣 </p> 
+      <p>  保持坚定与热爱 </p>
+      <p>  是依然能够为世间那些真情而心动</p>
+      
+      <!-- <p>最后，希望你一切都好<br> 希望所有俗套的祝福语都在你身上灵验<br> 希望你生日快乐</p>
+      <p>无论多大 都要热爱童话 英雄和魔法 <br>
+        你漂亮的城堡一直在那，帅气的骑士也总会在你最需要的时候出现
+      </p>
+    <aside> -->
+      <ul>
+        <li id="item1"><button onclick="skip1()"></button></li>
+        <li id="item2"><button onclick="skip2()"></button></li>
+        <li id="item3"><button onclick="skip3()"></button></li>
+        <li id="item4"><button onclick="skip4()"></button></li>
+        <li id="item5"><button onclick="skip5()"></button></li>
+      </ul>
+    </aside>
+    <script src="./js/common.js"></script>
+    <script src="./js/add.js"></script>
+  </body>
+</html>

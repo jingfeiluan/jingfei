@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+        overflow: hidden;
+      }
+      .video-background {
+        position: relative;
+
+        text-align: center;
+
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        /* Used to position the video and content */
+      }
+      .video-background__video {
+        object-fit: cover;
+
+        /* take full size  */
+        max-width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .video-background__inner {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
+  <body>
+    <div class="video-background">
+      <!-- the video container -->
+      <div class="video-background__inner">
+        <video class="video-background__video" autoplay loop muted>
+          <source src="../video/1.mp4" type="video/mp4" height="100vh" />
+        </video>
+      </div>
+      <!-- the content -->
+      <!-- <div class="video-background__content">这是小组件是视频背景哦</div> -->
+    </div>
+    <aside>
+      <ul>
+        <li id="item1"><button onclick="skip1()"></button></li>
+        <li id="item2"><button onclick="skip2()"></button></li>
+        <li id="item3"><button onclick="skip3()"></button></li>
+        <li id="item4"><button onclick="skip4()"></button></li>
+        <li id="item5"><button onclick="skip5()"></button></li>
+      </ul>
+    </aside>
+    <script src="./js/common.js"></script>
+    <script>
+      alert("某人的18岁~");
+    </script>
+  </body>
+</html>

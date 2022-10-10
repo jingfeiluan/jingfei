@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播图</title>
+    <style>
+      section {
+        text-align: center;
+        margin: 30px auto 20px;
+
+        vertical-align: middle;
+      }
+      .container {
+        background-color: rgba(34, 65, rgb(39, 39, 88), 0.5);
+      }
+      p {
+        display: inline-block;
+        font-size: 32px;
+        height: 32px;
+        line-height: 32px;
+      }
+      section img {
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../css/自动轮播图.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <img src="../psimage/庆祝.png" alt="" />
+          <p>管它几岁，开心万岁</p>
+          <img src="../psimage/庆祝.png" alt="" />
+        </div>
+      </section>
+      <div class="out">
+        <div class="inner">
+          <div class="img">
+            <img src="../img/张梦蝶生日/1.jpg" alt="" />
+          </div>
+          <div class="img">
+            <img src="../img/张梦蝶生日/2.jpg" alt="" />
+          </div>
+          <div class="img">
+            <img src="../img/张梦蝶生日/3.jpg" alt="" />
+          </div>
+          <div class="img">
+            <img src="../img/张梦蝶生日/5.jpg" alt="" />
+          </div>
+          <div class="img">
+            <img src="../img/张梦蝶生日/7.jpg" alt="" />
+          </div>
+          <div class="img">
+            <img src="../img/张梦蝶生日/6.jpg" alt="" />
+          </div>
+          <div class="img">
+            <img src="../img/张梦蝶生日/4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="button">
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <ul>
+        <li id="item1"><button onclick="skip1()"></button></li>
+        <li id="item2"><button onclick="skip2()"></button></li>
+        <li id="item3"><button onclick="skip3()"></button></li>
+        <li id="item4"><button onclick="skip4()"></button></li>
+        <li id="item5"><button onclick="skip5()"></button></li>
+      </ul>
+    </aside>
+    <script src="./js/common.js"></script>
+    <script src="./js/1_main.js"></script>
+  </body>
+</html>

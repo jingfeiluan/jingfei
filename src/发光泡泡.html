@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>发光泡泡</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        align-self: center;
+        vertical-align: middle;
+        margin: 50px 0 100px;
+      }
+      header img {
+        width: 20px;
+        height: 20px;
+      }
+      header p {
+        display: inline-block;
+        font-size: 20px;
+        height: 20px;
+      }
+      body {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background: linear-gradient(150deg, #d299c2, #fef9d7);
+        /* overflow: hidden; */
+      }
+      .container {
+        width: 200px;
+        height: 200px;
+        position: relative;
+      }
+      .bubble {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at 75% 30%,
+          #fff 5px,
+          #ff21c0 8%,
+          #5b5b5b 60%,
+          #ff21c0 100%
+        );
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,
+          inset 80px 0 60px #efcde6, inset -20px -60px 100px #f9f6de,
+          inset 0 50px 140px #f9f6de, 0 0 90px #fff;
+        animation: bubble 4s ease-in-out infinite;
+      }
+      .shadow {
+        background-color: rgba(0, 0, 0, 0.15);
+        width: 150px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-left: -75px;
+        bottom: -60px;
+        filter: blur(1px);
+        animation: shadow 4s ease-in-out infinite;
+      }
+      @keyframes bubble {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-80px);
+        }
+      }
+      @keyframes shadow {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.5);
+        }
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+      main p {
+        margin: 80px 0 0;
+        height: 20px;
+        font-size: 20px;
+        line-height: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="../psimage/庆祝.png" alt="" />
+        <p>生活明朗，万物可爱。人间值得，未来可期</p>
+        <img src="../psimage/庆祝.png" alt="" />
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="bubble"></div>
+        <div class="shadow"></div>
+      </div>
+      <p>
+        张梦蝶，生日快乐鸭
+        <br />
+        <br />
+        可恶又陪你老一岁，傻逼
+      </p>
+    </main>
+  </body>
+  <aside>
+    <ul>
+      <li id="item1"><button onclick="skip1()"></button></li>
+      <li id="item2"><button onclick="skip2()"></button></li>
+      <li id="item3"><button onclick="skip3()"></button></li>
+      <li id="item4"><button onclick="skip4()"></button></li>
+      <li id="item5"><button onclick="skip5()"></button></li>
+    </ul>
+  </aside>
+  <script src="./js/common.js"></script>
+</html>
